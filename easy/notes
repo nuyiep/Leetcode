@@ -1,2 +1,5 @@
 
 g++ -std=c++11 filename.cpp 
+
+sort()
+auto - general data type
