@@ -25,7 +25,11 @@ class Solution
 			while (i < end)
 			{
 				if (tolower(after_trim[len]) != tolower(after_trim[i]))
+				{
+					std::cout << "after_trim[len]: " << after_trim[len] << endl;
+					std::cout << "after_trim[i]: " << after_trim[i] << endl;
  					return (false);
+				}
 				i++;
 				len--;
 			}
@@ -41,5 +45,4 @@ int main()
 
 	bool x = A.isPalindrome(s);
 	cout << boolalpha << x << endl;
-	
 }
