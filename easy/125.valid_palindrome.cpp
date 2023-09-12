@@ -14,22 +14,19 @@ class Solution
 
 			while (i < len)
 			{
-				if (isalpha(s[i]) == 1)
+				if (isalnum(s[i])) //cannot equal 1 because it returns non-zero value
 					after_trim.push_back(s[i]);
 				i++;
 			}
 			len = after_trim.length();
 			i = 0;
-			len--;
-			int end = len;
-			while (i <= end)
+			int end = len - 1;
+			while (i < len)
 			{
-				if (tolower(after_trim[len]) != tolower(after_trim[i]))
-				{
+				if (tolower(after_trim[i]) != tolower(after_trim[end]))
  					return (false);
-				}
 				i++;
-				len--;
+				end--;
 			}
 			return (true);
 		}
